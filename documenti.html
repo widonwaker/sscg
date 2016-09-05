@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Applicazione Web jQuery Mobile</title>
+<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
+<link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="themes/monk.css" />
+<link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
+
+<style>
+.wrap {
+    white-space: normal !important;
+}
+ </style>
+
+<script type="text/javascript">
+        
+            $.ajax('http://gestisciapp.it/sscg/documenti.php', 
+                {
+                    dataType: "json",
+                    jsonp: "jsoncallback",
+                    method: 'get',
+                    contentType: 'application/json',
+                    success: function (data, status) {
+                        var _ul = $('<ul />').attr('data-role', 'listview');
+                        $.each(data, function (i, item) {
+                            $('<li />')
+                               .append($('<a href="#p'+item.id+'" />')
+                                 .append('<img src="images/app/documenti_list.png" />')
+                                 .append('<h2>' + item.nome + '</h2>')
+                                 .append('<p class="wrap">' + item.data + '</p>')
+                                )//$('<a />')
+                            .appendTo(_ul);
+							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;"><a href="#" onClick="location.href=\'documenti.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div><iframe src="https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '" width="100%" height="100%" align="center" ></iframe></div>');
+							makePage.appendTo($.mobile.pageContainer);
+                        });
+                        $('#output').empty().append(_ul).enhanceWithin();//.listview();
+                    },
+                    error: function (xhr, d, s) {
+                        $('#output').empty().html(s);
+                    }
+                });
+       
+    </script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header" id="header">
+        <div data-role="header" style="background-color: #FFFFFF;border:none;"><a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext"  class="ui-btn-left">Home</a></div>
+		<img src="images/app/logo.png" id="navImg"/>
+		
+	</div>
+
+   
+   <h1 class="hstyle">Documenti</h1>
+   
+  <div data-role="main" class="ui-content">
+    
+<div id="output"></div>
+
+  </div>
+
+
+</div>
+
+</body>
+</html>

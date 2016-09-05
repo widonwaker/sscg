@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Applicazione Web jQuery Mobile</title>
+<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>   
+<link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="themes/monk.css" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div data-role="page" id="privata">
+<div data-role="header" style="background-color: #FFFFFF;border:none;">
+<a href="#" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left" onClick="location.href='index.html'">Back</a>
+<img src="images/app/logo.png" id="navImg"/>
+</div>
+<div data-role="content">
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
+			<div data-role="header" data-theme="a" class="ui-corner-top">
+				<h1>Errore</h1>
+			</div>
+			<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+				<h3 class="ui-title">La password inserita non è corretta</h3>
+				<p>Assicurati di rispettare maiuscole e minuscole.</p>
+				<a href="#" onClick="location.href='index.html'" data-role="button" data-inline="true" data-theme="a">Ok</a>     
+			</div>
+		</div>
+        
+<form id="my-form" method="post" action="">
+    <label for"password">Inserisci la password</label>
+    <input type="password" name="password" id="password" value="" placeholder="password" required>
+    <button type="submit">Accedi</button>
+</form>
+</div>
+
+</div>
+
+ <script>
+    var form = document.getElementById('my-form'),
+        password = document.getElementById('password');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var data = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://gestisciapp.it/sscg/privata.php');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // if the response is json encoded
+                var response = JSON.parse(xhr.responseText);
+				
+                if (response === "ok") {
+                    location.href='areaprivata.html';
+                }
+
+                if (response === "nope") {
+                    $( "#popupDialog" ).popup( "open" )
+                }
+            }
+        }
+        xhr.send(data); 
+    });
+</script>
+</body>
+</html>
