@@ -48,20 +48,20 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <plugin name="camera" />
-    <plugin name="contacts" />
-    <plugin name="device" />
-    <plugin name="device-motion"/>
-    <plugin name="device-orientation" />
-    <plugin name="dialogs" />
-    <plugin name="file" />
-    <plugin name="file-transfer" />
-    <plugin name="geolocation" />
-    <plugin name="globalization"/>
-    <plugin name="inappbrowser" />
-    <plugin name="media" />
-    <plugin name="splashscreen" />
-    <plugin name="vibration" />
+    <plugin name="com.phonegap.plugin.camera" />
+    <plugin name="com.phonegap.plugin.contacts" />
+    <plugin name="com.phonegap.plugin.device" />
+    <plugin name="com.phonegap.plugin.device-motion"/>
+    <plugin name="com.phonegap.plugin.device-orientation" />
+    <plugin name="com.phonegap.plugin.dialogs" />
+    <plugin name="com.phonegap.plugin.file" />
+    <plugin name="com.phonegap.plugin.file-transfer" />
+    <plugin name="com.phonegap.plugin.geolocation" />
+    <plugin name="com.phonegap.plugin.globalization"/>
+    <plugin name="com.phonegap.plugin.inappbrowser" />
+    <plugin name="com.phonegap.plugin.media" />
+    <plugin name="com.phonegap.plugin.splashscreen" />
+    <plugin name="com.phonegap.plugin.vibration" />
 	
 
     <!-- Third party plugins -->
