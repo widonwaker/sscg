@@ -45,3 +45,6 @@ h1 {
 	width: 100%;
 	text-align: center;
 }
+#output {
+    -webkit-overflow-scrolling: touch;
+}
