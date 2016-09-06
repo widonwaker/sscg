@@ -48,20 +48,20 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <plugin name="camera" source="npm"/>
-    <plugin name="contacts" source="npm"/>
-    <plugin name="device" source="npm"/>
-    <plugin name="device-motion" source="npm"/>
-    <plugin name="device-orientation" source="npm"/>
-    <plugin name="dialogs" source="npm"/>
-    <plugin name="file" source="npm"/>
-    <plugin name="file-transfer" source="npm"/>
-    <plugin name="geolocation" source="npm"/>
-    <plugin name="globalization" source="npm"/>
-    <plugin name="inappbrowser" source="npm"/>
-    <plugin name="media" source="npm"/>
-    <plugin name="splashscreen" source="npm"/>
-    <plugin name="vibration" source="npm"/>
+    <plugin name="camera" />
+    <plugin name="contacts" />
+    <plugin name="device" />
+    <plugin name="device-motion"/>
+    <plugin name="device-orientation" />
+    <plugin name="dialogs" />
+    <plugin name="file" />
+    <plugin name="file-transfer" />
+    <plugin name="geolocation" />
+    <plugin name="globalization"/>
+    <plugin name="inappbrowser" />
+    <plugin name="media" />
+    <plugin name="splashscreen" />
+    <plugin name="vibration" />
 	
 
     <!-- Third party plugins -->
