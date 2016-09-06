@@ -48,20 +48,20 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <plugin name="com.phonegap.plugin.camera" />
-    <plugin name="com.phonegap.plugin.contacts" />
-    <plugin name="com.phonegap.plugin.device" />
-    <plugin name="com.phonegap.plugin.device-motion"/>
-    <plugin name="com.phonegap.plugin.device-orientation" />
-    <plugin name="com.phonegap.plugin.dialogs" />
-    <plugin name="com.phonegap.plugin.file" />
-    <plugin name="com.phonegap.plugin.file-transfer" />
-    <plugin name="com.phonegap.plugin.geolocation" />
-    <plugin name="com.phonegap.plugin.globalization"/>
-    <plugin name="com.phonegap.plugin.inappbrowser" />
-    <plugin name="com.phonegap.plugin.media" />
-    <plugin name="com.phonegap.plugin.splashscreen" />
-    <plugin name="com.phonegap.plugin.vibration" />
+    <plugin name="cordova-plugin-camera" source="npm"/>
+    <plugin name="cordova-plugin-contacts" source="npm"/>
+    <plugin name="cordova-plugin-device" source="npm"/>
+    <plugin name="cordova-plugin-device-motion" source="npm"/>
+    <plugin name="cordova-plugin-device-orientation" source="npm"/>
+    <plugin name="cordova-plugin-dialogs" source="npm"/>
+    <plugin name="cordova-plugin-file" source="npm"/>
+    <plugin name="cordova-plugin-file-transfer" source="npm"/>
+    <plugin name="cordova-plugin-geolocation" source="npm"/>
+    <plugin name="cordova-plugin-globalization" source="npm"/>
+    <plugin name="cordova-plugin-inappbrowser" source="npm"/>
+    <plugin name="cordova-plugin-media" source="npm"/>
+    <plugin name="cordova-plugin-splashscreen" source="npm"/>
+    <plugin name="cordova-plugin-vibration" source="npm"/>
 	
 
     <!-- Third party plugins -->
