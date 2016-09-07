@@ -35,14 +35,14 @@
                         var _ul = $('<ul />').attr('data-role', 'listview');
                         $.each(data, function (i, item) {
                             $('<li />')
-                               .append($('<a href="#" onclick="cordova.InAppBrowser.open(\'https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '&embedded=true\', \'_blank\', \'location=yes\', \'toolbarposition=top\', \'closebuttoncaption=Chiudi\');"/>')
+                               .append($('<a href="#" onclick="cordova.InAppBrowser.open(\'https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '&embedded=true\', \'_blank\', \'location=no,toolbarposition=top,closebuttoncaption=Chiudi\');"/>')
                                  .append('<img src="images/app/documenti_list.png" />')
                                  .append('<h2>' + item.nome + '</h2>')
                                  .append('<p class="wrap">' + item.data + '</p>')
                                 )//$('<a />')
                             .appendTo(_ul);
-							var makePage = $('<div data-role="page" id="p'+item.id+'"  style="width: 100px; height: 100%;"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'documenti.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div><iframe src="https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '" width="100%" height="100%" align="center" ></iframe></div>');
-							makePage.appendTo($.mobile.pageContainer);
+							//var makePage = $('<div data-role="page" id="p'+item.id+'"  style="width: 100px; height: 100%;"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'documenti.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div><iframe src="https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '" width="100%" height="100%" align="center" ></iframe></div>');
+							//makePage.appendTo($.mobile.pageContainer);
                         });
                         $('#output').empty().append(_ul).enhanceWithin();//.listview();
                     },
