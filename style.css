@@ -48,3 +48,8 @@ h1 {
 #output {
     -webkit-overflow-scrolling: touch;
 }
+.separatore {
+	background-color: #9D0B15;
+	border:none;
+	height: 5px;
+}
