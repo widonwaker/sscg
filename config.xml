@@ -35,7 +35,7 @@
     <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="AutoHideSplashScreen"       value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
-    <preference name="SplashScreenDelay"          value="3000" />	
+    <preference name="SplashScreenDelay"          value="2000" />	
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	<preference name="android-build-tool"         value="gradle" />
@@ -65,7 +65,7 @@
     <plugin name="cordova-plugin-media" source="npm"/>
 	<!--<plugin name="cordova-plugin-network-information" source="npm"/>-->
     <plugin name="cordova-plugin-splashscreen" source="npm"/>
-    <plugin name="cordova-plugin-vibration" source="npm"/>
+    <!--<plugin name="cordova-plugin-vibration" source="npm"/>-->
 	
 
     <!-- Third party plugins -->
@@ -84,11 +84,13 @@
     <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
     <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
     <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+	<platform name="ios">
 	<icon src="res/icon/ios/icon-60@3x.png"         gap:platform="ios"        width="180" height="180" />
     <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+	</platform>
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
