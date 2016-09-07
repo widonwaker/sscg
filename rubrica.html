@@ -38,7 +38,7 @@ var _ul = $('<ul />').attr('data-role', 'listview').attr('data-filter', 'true').
                                .append($('<a href="#p'+item.id+'" >'+item.cognome+' '+item.nome+'</a>')
                                 )//$('<a />')
                             .appendTo(_ul);
-							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div>Nome: '+item.nome+'<br>Cognome:'+item.cognome+'<br>Email:'+item.mail+'<br>Cellulare:'+item.cellulare+'<br>Ufficio '+item.ufficio+'</div>');
+							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/><div class="separatore"></div></div><div data-role="main" class="ui-content"><h2 class="hstyle">'+item.nome+' '+item.cognome+'</h2><ul data-role="listview" data-inset="true"><li><img src="images/app/tel.png" alt="USA" class="ui-li-icon">'+item.cellulare+'</li><li><img src="images/app/tel.png" alt="USA" class="ui-li-icon">'+item.ufficio+'</li><li><img src="images/app/email.png" alt="USA" class="ui-li-icon">'+item.mail+'</li></ul></div></div>');
 							makePage.appendTo($.mobile.pageContainer);
                         });
                         $('#output').empty().append(_ul).enhanceWithin();//.listview();

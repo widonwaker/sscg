@@ -3,30 +3,41 @@
 <head> 
 <title>My Page</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="themes/monk.css" />
+<link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="jw-jqm-cal.css" />
 <script type="text/javascript" src="jw-jqm-cal.js"></script>
 <script type="text/javascript">
  $(document).on("pageinit", "#view-calendar", function () { 
    $("#calendar").jqmCalendar({
-      events : [ { "summary" : "Provola evento", "begin" : new Date(2016,09,01,10,30), "end" : new Date(2016,09,01,12,30) }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() } ],
+      events : [ { "summary" : "Test event", "begin" : new Date(2016,09,07,10,30), "end" : new Date(2016,09,07,12,30) }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() } ],
       months : ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
-      days : ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
-      startOfWeek : 0,
+      days : ["Do", "Lu", "Ma", "Me", "Gi", "Ve", "Sa"],
+      startOfWeek : 1
    });
 })
 </script>
 
+<style>
+#calendar {
+    white-space: normal !important;
+}
+ </style>
 </head> 
-<body> 
+    <body> 
 
-<div data-role="page" id="view-calendar" data-theme="c">
+<div data-role="page" id="view-calendar" data-theme="a">
 
-<div data-role="header">
-<h1>My Title</h1>
-</div>
+	<div data-role="header" id="header" data-position="fixed">
+        <div data-role="header" style="background-color: #FFFFFF;border:none;"><a href="#" onClick="location.href='areaprivata.html'" data-role="button" data-icon="back" data-iconpos="notext"  class="ui-btn-left">Home</a></div>
+		<img src="images/app/logo.png" id="navImg"/>
+		<div class="separatore"></div>
+	</div>
 
 <div data-role="content">
 <div id="calendar"></div>
