@@ -38,7 +38,7 @@ var _ul = $('<ul />').attr('data-role', 'listview').attr('data-filter', 'true').
                                .append($('<a href="#p'+item.id+'" >'+item.cognome+' '+item.nome+'</a>')
                                 )//$('<a />')
                             .appendTo(_ul);
-							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div>Nome: '+item.nome+'<br>Cognome:'+item.cognome+'<br>Email:'+item.mail+'<br>Cellulare:'+item.cellulare+'<br>Ufficio '+item.ufficio+'</div>');
+							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div>Nome: '+item.nome+'<br>Cognome:'+item.cognome+'<br>Email:'+item.mail+'<br>Cellulare:'+item.cellulare+'<br>Ufficio '+item.ufficio+'</div>');
 							makePage.appendTo($.mobile.pageContainer);
                         });
                         $('#output').empty().append(_ul).enhanceWithin();//.listview();

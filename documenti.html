@@ -41,7 +41,7 @@
                                  .append('<p class="wrap">' + item.data + '</p>')
                                 )//$('<a />')
                             .appendTo(_ul);
-							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;"><a href="#" onClick="location.href=\'documenti.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div><iframe src="https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '" width="100%" height="100%" align="center" ></iframe></div>');
+							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'documenti.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/></div><iframe src="https://docs.google.com/gview?embedded=true&url=http://gestisciapp.it/sscg/' + item.path + '" width="100%" height="100%" align="center" ></iframe></div>');
 							makePage.appendTo($.mobile.pageContainer);
                         });
                         $('#output').empty().append(_ul).enhanceWithin();//.listview();
