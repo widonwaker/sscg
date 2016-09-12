@@ -68,6 +68,7 @@
 	<!--<plugin name="cordova-plugin-network-information" source="npm"/>-->
     <plugin name="cordova-plugin-splashscreen" source="npm"/>
     <!--<plugin name="cordova-plugin-vibration" source="npm"/>-->
+	<plugin name="ionic-plugin-keyboard" source="npm"/>
 	
 
     <!-- Third party plugins -->
