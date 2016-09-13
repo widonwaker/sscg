@@ -4,23 +4,40 @@
 <title>My Page</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>   
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="themes/monk.css" />
 <link href="style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="jw-jqm-cal.css" />
-<script type="text/javascript" src="jw-jqm-cal.js"></script>
-<script type="text/javascript">
- $(document).on("pageinit", "#view-calendar", function () { 
-   $("#calendar").jqmCalendar({
-      events : [ { "summary" : "Test event", "begin" : new Date(2016,09,07,10,30), "end" : new Date(2016,09,07,12,30) }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() }, { "summary" : "Test event", "begin" : new Date(), "end" : new Date() } ],
-      months : ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
-      days : ["Do", "Lu", "Ma", "Me", "Gi", "Ve", "Sa"],
-      startOfWeek : 1
-   });
-})
+<link rel="stylesheet" href="themes/zabuto_calendar.min.css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/zabuto_calendar.min.js"></script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        $("#my-calendar").zabuto_calendar({
+        language: "it",
+		cell_border: true,
+		legend: [
+        {type: "text", label: "Special event", badge: "00"},
+        {type: "block", label: "Regular event", classname: "purple"},
+        {type: "spacer"},
+        {type: "text", label: "Bad"},
+        {type: "list", list: ["grade-1", "grade-2", "grade-3", "grade-4"]},
+        {type: "text", label: "Good"}
+         ],
+		 nav_icon: {
+        prev: '<i class="fa fa-chevron-circle-left"></i>',
+        next: '<i class="fa fa-chevron-circle-right"></i>'
+         },
+		 ajax: {
+             url: "http://gestisciapp.it/sscg/tmpls/events_to_app.php",
+             modal: true
+         }
+        });
+    });
 </script>
 
 <style>
@@ -40,7 +57,7 @@
 	</div>
 
 <div data-role="content">
-<div id="calendar"></div>
+<div id="my-calendar"></div>
 </div>
    
 
