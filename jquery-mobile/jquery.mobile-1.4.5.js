@@ -12656,42 +12656,6 @@ $.widget( "mobile.controlgroup", $.extend( {
 
 
 
-		_setRelative: function() {
-			if( this.options.position !== "fixed" ){
-				$( "[data-"+ $.mobile.ns + "role='page']" ).css({ "position": "relative" });
-			}
-		},
-
-		_destroy: function() {
-			var pageClasses, toolbarClasses, hasFixed, header, hasFullscreen,
-				page = this.pagecontainer.pagecontainer( "getActivePage" );
-
-			this._super();
-			if ( this.options.position === "fixed" ) {
-				hasFixed = $(  "body>.ui-" + this.role + "-fixed" )
-							.add( page.find( ".ui-" + this.options.role + "-fixed" ) )
-							.not( this.element ).length > 0;
-				hasFullscreen = $(  "body>.ui-" + this.role + "-fixed" )
-							.add( page.find( ".ui-" + this.options.role + "-fullscreen" ) )
-							.not( this.element ).length > 0;
-				toolbarClasses =  "ui-header-fixed ui-footer-fixed ui-header-fullscreen in out" +
-					" ui-footer-fullscreen fade slidedown slideup ui-fixed-hidden";
-				this.element.removeClass( toolbarClasses );
-				if ( !hasFullscreen ) {
-					pageClasses = "ui-page-" + this.role + "-fullscreen";
-				}
-				if ( !hasFixed ) {
-					header = this.role === "header";
-					pageClasses += " ui-page-" + this.role + "-fixed";
-					page.css( "padding-" + ( header ? "top" : "bottom" ), "" );
-				}
-				page.removeClass( pageClasses );
-			}
-		}
-
-	});
-})( jQuery );
-
 (function( $, undefined ) {
 	$.widget( "mobile.toolbar", $.mobile.toolbar, {
 
