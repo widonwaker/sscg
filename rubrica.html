@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <title>Applicazione Web jQuery Mobile</title>
 <meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<script>
+if(window.localStorage.getItem("loggedIn") != 1) {
+location.href='privata.html';
+}
+</script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
 <link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>

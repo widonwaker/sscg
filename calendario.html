@@ -3,6 +3,11 @@
 <head> 
 <title>Agenda</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script>
+if(window.localStorage.getItem("loggedIn") != 1) {
+location.href='privata.html';
+}
+</script>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>   
 <link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
 <link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
@@ -59,8 +64,12 @@
                         },
 						language: "it",
                         legend: [
-                            {type: "text", label: "Special event", badge: "00"},
-                            {type: "block", label: "Regular event"}
+                            {type: "text", label: "Evento presente", badge: "00"},
+                            {type: "text", label: "Regular event"},
+							{type: "block", label: "Regular event"},
+							{type: "block", label: "Regular event"},
+							{type: "block", label: "Regular event"},
+							{type: "block", label: "Regular event"},
                         ]
                     });
                 });
@@ -100,8 +109,7 @@
 		<div class="separatore"></div>
 	</div>
 
-<div data-role="content">
-</div>
+
             <div id="date-popover" class="popover top" style="cursor: pointer; display: block; margin-left: 33%; margin-top: -50px; width: 175px;">
                 <div class="arrow"></div>
                 <h3 class="popover-title" style="display: none;"></h3>
