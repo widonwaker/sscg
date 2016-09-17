@@ -55,10 +55,18 @@ h1 {
 }
 .iosinput {
 	width:96%;
+	margin-right: auto;
+	margin-left: auto;
     -moz-border-radius:0.3125em; /* Firefox */
     -webkit-border-radius: 0.3125em; /* Safari, Chrome */
     -khtml-border-radius: 0.3125em; /* KHTML */
     border-radius: 0.3125em; /* CSS3 */
 	border-color: #9d0b15;
     behavior:url("border-radius.htc");
+}
+.legenda {
+    color: #999999;
+    font-size: 10px;
+    font-weight: normal;
+	margin-left: 5px;
 }

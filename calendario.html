@@ -22,27 +22,6 @@ location.href='privata.html';
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/zabuto_calendar.min.js" type="text/javascript"></script>
 
-<!--<script type="application/javascript">
-    $(document).ready(function () {
-        $("#my-calendar").zabuto_calendar({
-        language: "it",
-		cell_border: true,
-		legend: [
-        {type: "text", label: "Special event", badge: "00"},
-        {type: "block", label: "Regular event", classname: "purple"},
-        {type: "spacer"},
-        {type: "text", label: "Bad"},
-        {type: "list", list: ["grade-1", "grade-2", "grade-3", "grade-4"]},
-        {type: "text", label: "Good"}
-         ],
-		 ajax: {
-             url: "http://gestisciapp.it/sscg/tmpls/events_to_app.php",
-             modal: true
-         },
-		 action: function() { myDateFunction(this.id); }
-        });
-    });
-</script>-->
             <script type="application/javascript">
                 $(document).ready(function () {
                     $("#date-popover").popover({html: true, trigger: "manual"});
@@ -64,12 +43,7 @@ location.href='privata.html';
                         },
 						language: "it",
                         legend: [
-                            {type: "text", label: "Evento presente", badge: "00"},
-                            {type: "text", label: "Regular event"},
-							{type: "block", label: "Regular event"},
-							{type: "block", label: "Regular event"},
-							{type: "block", label: "Regular event"},
-							{type: "block", label: "Regular event"},
+                            {type: "text", label: "Evento presente", badge: "00"}
                         ]
                     });
                 });
@@ -118,8 +92,20 @@ location.href='privata.html';
             </div>
 
             <div id="my-calendar"></div>
+            
+   <div class="legenda">
+   <a class="pull-left event event-info"></a> COMPI SUD: Conferenze dei Ministri Provinciali delle Province del Sud Italia<br/>
+   <a class="pull-left event event-important"></a> Provincia<br/>
+   <a class="pull-left event event-lightsuccess"></a> INC.PROV.: Incontri Provinciali<br/>
+   <a class="pull-left event event-warning"></a> CFV: Centro Francescano Vocazioni Provinciale<br/>
+   <a class="pull-left event event-success"></a> UNDER SEVEN: Incontri Under Seven<br/>
+   <a class="pull-left event "></a> Segretariato Missione ed Eangalizzazione<br/>
+   <a class="pull-left event event-special"></a> MOREFRA: Movimento Religiose Francescane<br/>
+   <a class="pull-left event event-darkinfo"></a> OFS - GiFra<br/>
+   <a class="pull-left event event-salmone"></a> Missione Popolare<br/>
+   <a class="pull-left event event-inverse"></a> Segretariato Formazione e Studi
+   </div>
    
-
 </div>
 
 </body>
