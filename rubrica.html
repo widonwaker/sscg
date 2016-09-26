@@ -9,7 +9,6 @@ if(window.localStorage.getItem("loggedIn") != 1) {
 location.href='privata.html';
 }
 </script>
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
 <link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="themes/monk.css" />
@@ -27,6 +26,8 @@ location.href='privata.html';
     white-space: normal !important;
 }
  </style>
+ 
+
 
 <script type="text/javascript">
         
@@ -43,8 +44,36 @@ var _ul = $('<ul />').attr('data-role', 'listview').attr('data-filter', 'true').
                                .append($('<a href="#p'+item.id+'" >'+item.cognome+' '+item.nome+'</a>')
                                 )//$('<a />')
                             .appendTo(_ul);
-							var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/><div class="separatore"></div></div><div data-role="main" class="ui-content"><h2 class="hstyle">'+item.nome+' '+item.cognome+'</h2><ul data-role="listview" data-inset="true"><li><a href="tel:+39'+item.cellulare+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare+'</a></li><li><a href="tel:+39'+item.cellulare2+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare2+'</a></li><li><a href="tel:+39'+item.cellulare3+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare3+'</a></li><li><a href="mailto:'+item.mail+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail+'</a></li><li><a href="mailto:'+item.mail2+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail2+'</a></li></ul><ul data-role="listview" data-inset="true"><li>Professione Solenne: '+item.solenne+'</li><li>Sacerdozio: '+item.sacerdozio+'</li><li>Diaconato: '+item.diaconato+'</li></ul>* anche su Whatsapp</div></div>');
+							var makePage = $('<div />').attr('data-role', 'page').attr('id', 'p'+item.id)
+							.append($('<div />').attr('data-role', 'header').attr('style', 'background-color: #FFFFFF;border:none;').attr('data-position', 'fixed')
+							.append('<a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left"></a>')
+							.append('<img src="images/app/logo.png" id="navImg"/>')
+							.append('<div class="separatore"></div></div>')); // header
+							
+							var content = $('<div />').attr('data-role', 'main').attr('class', 'ui-content')
+							.append('<h2 class="hstyle">'+item.nome+' '+item.cognome+'</h2>') ;							                  
+				            
+							var listul = $('<ul />').attr('data-role', 'listview').attr('data-inset', 'true') ;
+  if (item.cellulare != '') { listul.append('<li><a href="tel:+39'+item.cellulare+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare+'</a></li>') };
+  if (item.cellulare2 != '') { listul.append('<li><a href="tel:+39'+item.cellulare2+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare2+'</a></li>') };
+  if (item.cellulare3 != '') { listul.append('<li><a href="tel:+39'+item.cellulare3+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare3+'</a></li>') };
+  if (item.mail != '') { listul.append('<li><a href="mailto:'+item.mail+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail+'</a></li>') };
+  if (item.mail2 != '') { listul.append('<li><a href="mailto:'+item.mail2+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail2+'</a></li>') };
+                             listul.appendTo(content);
+							 
+							var listul2 = $('<ul />').attr('data-role', 'listview').attr('data-inset', 'true') ;
+  if (item.solenne != '') { listul2.append('<li>Professione Solenne: '+item.solenne+'</li>') };
+  if (item.sacerdozio != '') { listul2.append('<li>Sacerdozio: '+item.sacerdozio+'</li>') };
+  if (item.diaconato != '') { listul2.append('<li>Diaconato: '+item.diaconato+'</li>') };		
+                            
+                             listul2.appendTo(content);					
+							 content.append('* anche su Whatsapp');
+							 content.appendTo(makePage);
+	                        
 							makePage.appendTo($.mobile.pageContainer);
+							//var makePage = $('<div data-role="page" id="p'+item.id+'"><div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href=\'rubrica.html\'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a><img src="images/app/logo.png" id="navImg"/><div class="separatore"></div></div><div data-role="main" class="ui-content"><h2 class="hstyle">'+item.nome+' '+item.cognome+'</h2><ul data-role="listview" data-inset="true"><li><a href="tel:+39'+item.cellulare+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare+'</a></li><li><a href="tel:+39'+item.cellulare2+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare2+'</a></li><li><a href="tel:+39'+item.cellulare3+'"><img src="images/app/tel.png" class="ui-li-icon">'+item.cellulare3+'</a></li><li><a href="mailto:'+item.mail+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail+'</a></li><li><a href="mailto:'+item.mail2+'"><img src="images/app/email.png" class="ui-li-icon">'+item.mail2+'</a></li></ul><ul data-role="listview" data-inset="true"><li>Professione Solenne: '+item.solenne+'</li><li>Sacerdozio: '+item.sacerdozio+'</li><li>Diaconato: '+item.diaconato+'</li></ul>* anche su Whatsapp</div></div>');
+							
+							//makePage.appendTo($.mobile.pageContainer);
                         });
                         $('#output').empty().append(_ul).enhanceWithin();//.listview();
                     },
