@@ -23,6 +23,19 @@ location.href='privata.html';
 <script src="js/zabuto_calendar.min.js" type="text/javascript"></script>
 
             <script type="application/javascript">
+			$(document).on({
+    ajaxSend: function () { loading('show'); },
+    ajaxStart: function () { loading('show'); },
+    ajaxStop: function () { loading('hide'); },
+    ajaxError: function () { loading('hide'); }
+});
+ 
+function loading(showOrHide) {
+    setTimeout(function(){
+        $.mobile.loading(showOrHide);
+    }, 1); 
+}
+			
                 $(document).ready(function () {
                     $("#date-popover").popover({html: true, trigger: "manual"});
                     $("#date-popover").hide();
