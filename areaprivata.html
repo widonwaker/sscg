@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Area Privata</title>
-<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <script>
 if(window.localStorage.getItem("loggedIn") != 1) {
 location.href='privata.html';
@@ -52,7 +52,7 @@ location.href='privata.html';
     
         <div class="ui-grid-a">
       <div class="ui-block-a">
-        <a href="#" onClick="location.href='rubrica.html'" data-transition="fade" class="ui-btn ui-corner-all ui-shadow" style="background-color:#9D0B15;color:#ffffff;"><img src="images/app/rubrica.png"/><br>Rubrica</a><br>
+        <a href="#" onClick="location.href='rubrica.html'" class="ui-btn ui-corner-all ui-shadow" style="background-color:#9D0B15;color:#ffffff;"><img src="images/app/rubrica.png"/><br>Rubrica</a><br>
       </div>
       <div class="ui-block-b">
         <a href="#conventi" class="ui-btn ui-corner-all ui-shadow" data-transition="fade" style="background-color:#9D0B15;color:#ffffff;"><img src="images/app/conventi.png"/><br>Conventi</a><br>
@@ -278,9 +278,11 @@ location.href='privata.html';
 </div>
 
 
-
-
-
+<script>
+$("#rubricapage").click(function () {     
+    $.mobile.changePage("rubrica.html");
+});
+</script>
 
 </body>
 </html>
