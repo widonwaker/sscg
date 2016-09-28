@@ -48,11 +48,14 @@ function loading(showOrHide) {
                     method: 'get',
                     contentType: 'application/json',
                     success: function (data, status) {
-                        var _ul = $('<ul />').attr('data-role', 'listview').attr('data-inset', 'true');
+                        var _ul = $('<ul />').attr('data-role', 'listview');
                         $.each(data, function (i, item) {
                             $('<li />')
-                                 .append('<h3 class="wrap">' + item.txt + '</h3>')
-                                 .append('<p class="ui-li-aside">' + item.data + '</p>')
+							     .append($('<a href="#">')
+							     .append('<img src="images/app/news_list.png" />')
+                                 .append('<p class="wrap">' + item.txt + '</p>')
+                                 .append('<p class="wrap">' + item.data + '</p>')
+								 )
                             .appendTo(_ul);
 							
                         });
