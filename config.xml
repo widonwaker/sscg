@@ -17,6 +17,7 @@
     </author>
 	
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
+	<preference name="windows-target-version" value="10.0" />
 
     <!--
         If you do not want any permissions to be added to your app, add the
