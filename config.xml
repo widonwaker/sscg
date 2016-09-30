@@ -16,6 +16,11 @@
         Informatica Team
     </author>
 	
+        <preference name="WindowsToastCapable" value="true" />
+	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
+        <preference name="windows-phone-target-version" value="10.0" />
+	<preference name="Windows.Universal" value="10.0.10240.0" />
+	
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -190,10 +195,7 @@
         </gap:config-file>
     </platform>
     <platform name="winphone">
-        <preference name="WindowsToastCapable" value="true" />
-	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
-        <preference name="windows-phone-target-version" value="10.0" />
-	<preference name="Windows.Universal" value="10.0.10240.0" />
+
     </platform>
 
 </widget>
