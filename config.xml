@@ -25,6 +25,7 @@
 <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
 <preference name="Windows.Universal-MinVersion" value="10.0.0.0" />
 	<preference name="uap-target-min-version" value="10.0.10586.0" />
+	<preference name="windows-appx-target" value="uap" />
 	
 
     <!--
