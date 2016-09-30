@@ -18,6 +18,7 @@
 	
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
         <preference name="windows-appx-target" value="uap"/>
+	<preference name="windows-arch" value="arm"/>
 
     <!--
         If you do not want any permissions to be added to your app, add the
