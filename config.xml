@@ -18,9 +18,9 @@
 	
         <preference name="WindowsToastCapable" value="true" />
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
-        <preference name="windows-phone-target-version" value="8.1" />
-        <preference name="windows-target-version" value="8.1" />
-	<preference name="windows-appx-target" value="uap" />
+        <preference name="windows-phone-target-version" value="10.0" />
+            <preference name="Windows.Mobile" value="10.0.10240.0" />
+            <preference name="Windows.Mobile-MaxVersionTested" value="10.0.14295.1000" />
 	
 
     <!--
