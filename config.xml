@@ -83,7 +83,8 @@
     
 
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+    <icon src="res/icon/windows-phone/icon.png" platform="winphone" />
+    <icon src="res/icon/windows-phone/tileicon.png" platform="winphone" role="background" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
