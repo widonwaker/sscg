@@ -38,6 +38,10 @@ h1 {
 #header {
 	background-color: #FFFFFF;
 	border: none;
+	position:fixed;
+	z-index:10;
+	top:0;
+	width:100%
 }
 .hstyle {
 	background-color:#9D0B15;
