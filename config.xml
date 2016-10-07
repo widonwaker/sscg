@@ -5,7 +5,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "it.gestisciapp.sscg"
         version   = "1.1.0"
-	ios-CFBundleVersion = "1.1.0"
+	ios-CFBundleVersion = "110"
 	windows-packageVersion = "1.1.0">
 
     <name>OFMNA</name>
