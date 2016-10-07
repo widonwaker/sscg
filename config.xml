@@ -4,7 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "it.gestisciapp.sscg"
-        version   = "1.1.0">
+        version   = "1.1.0"
+	CFBundleVersion = "1.1.0">
 
     <name>OFMNA</name>
 
@@ -192,9 +193,6 @@
         </gap:config-file>
 		<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
         <false/>
-        </gap:config-file>
-	<gap:config-file platform="ios" parent="CFBundleVersion">
-               <string>200</string>
         </gap:config-file>
     </platform>
     <platform name="winphone">
