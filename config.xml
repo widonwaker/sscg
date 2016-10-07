@@ -4,8 +4,19 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "it.gestisciapp.sscg"
-        version   = "1.1.0"
-	CFBundleVersion = "1.1.0">
+        version   = "1.1.0">
+	
+<!-- Android -->
+<widget versionCode="1.1.0">
+</widget>
+
+<!-- iOS -->
+<widget CFBundleVersion="1.1.0">
+</widget>
+
+<!-- Windows -->
+<widget packageVersion="1.1.0">
+</widget>
 
     <name>OFMNA</name>
 
