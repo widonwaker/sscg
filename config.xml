@@ -17,7 +17,7 @@
     <author href="http://www.informaticateam.net/" email="info@informaticateam.net">
         Informatica Team
     </author>
-	<preference name="phonegap-version" value="cli-5.4.1" />
+	<!--<preference name="phonegap-version" value="cli-5.4.1" />-->
         <preference name="WindowsToastCapable" value="true" />
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
         <preference name="windows-phone-target-version" value="8.1" />
