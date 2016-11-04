@@ -6,7 +6,7 @@
         id        = "it.gestisciapp.sscg"
         version   = "1.2.2"
 	ios-CFBundleVersion = "122"
-	windows-packageVersion = "1.2.2">
+	windows-packageVersion = "1.2.3">
 
     <name>OFMNA</name>
 
@@ -17,7 +17,7 @@
     <author href="http://www.informaticateam.net/" email="info@informaticateam.net">
         Informatica Team
     </author>
-	<!--<preference name="phonegap-version" value="cli-5.4.1" />-->
+	<preference name="phonegap-version" value="cli-5.4.1" />
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
         <preference name="windows-phone-target-version" value="8.1" />
 	<preference name="windows-target-version" value="8.1" /> 
@@ -206,6 +206,9 @@
         <gap:config-file platform="ios" parent="EnableDotNetNativeCompatibleProfile" overwrite="true">
         <false/>
         </gap:config-file>
+        <config-file target="config.xml" parent="/*" >
+            <preference name="WindowsToastCapable" value="true" />
+        </config-file>
     </platform>
 
 </widget>
