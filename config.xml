@@ -156,7 +156,10 @@
    <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
    <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
-    <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
+    <platform name="windows">
+    <!-- images are determined by width and height. The following are supported -->
+    <splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/>
+    </platform>
 
     <!--
         Define access to external domains.
