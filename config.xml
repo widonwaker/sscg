@@ -23,6 +23,10 @@
 	<preference name="windows-target-version" value="8.1" /> -->
         <preference name="WindowsToastCapable" value="true" />
 	<preference name="windows-appx-target" value="uap" />
+	<preference name="SplashScreenSpinnerColor" value="#242424"/>
+        <preference name="SplashScreenSpinnerColor" value="DarkRed"/>
+        <preference name="SplashScreenSpinnerColor" value="rgb(50,128,128)"/>
+	<preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF"/>
 	
 
     <!--
