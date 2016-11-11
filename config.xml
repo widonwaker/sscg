@@ -160,7 +160,7 @@
     <platform name="windows">
     <!-- images are determined by width and height. The following are supported -->
     <splash src="res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280"/>    
-    <splash src="res/screen/windows/splashImage.png" width="1152" height="1920"/>
+    <splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/>
     </platform>
     <splash src="splash.png" />	
 
