@@ -158,8 +158,9 @@
    <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
     <platform name="windows">
-    <!-- images are determined by width and height. The following are supported -->
-    <splash src="res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280"/>    
+    <splash src="res/screen/windows-phone/SplashScreenImage.screen-720p.jpg" width="720" height="1280"/>      
+    <splash src="res/screen/windows-phone/SplashScreenImage.screen-WVGA.jpg" width="480" height="800"/>  
+    <splash src="res/screen/windows-phone/SplashScreenImage.screen-WXGA.jpg" width="768" height="1280"/>    
     <splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/>
     </platform>
     <splash src="splash.png" />	
