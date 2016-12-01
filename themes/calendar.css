@@ -367,6 +367,9 @@
 .event-salmone {
   background-color: #f98367;
 }
+.event-neut {
+  background-color: #7f7f7f;
+}
 .day-highlight:hover,
 .day-highlight {
   background-color: #dddddd;
