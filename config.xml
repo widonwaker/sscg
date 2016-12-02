@@ -201,7 +201,7 @@
         </gap:config-file>
     </platform>
     <platform name="winphone">
-	<preference name="phonegap-version" value="cli-6.0.0" />
+	<preference name="phonegap-version" value="cli-5.4.1" />
 	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
         <!--<preference name="windows-phone-target-version" value="8.1" />
 	<preference name="windows-target-version" value="8.1" />  -->
