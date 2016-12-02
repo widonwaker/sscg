@@ -19,7 +19,7 @@ $(document).ready(function(){
 	});   
 	
 	var output = $('.swipe-wrap');
-	var qweqwe = $('#qweqwe');
+
 	
 
 	$.ajax({
@@ -29,17 +29,14 @@ $(document).ready(function(){
 		timeout: 2000,
 		success: function(data, status){
 			$.each(data, function(i,item){ 
-				var landmark = '<div><img src="http://gestisciapp.it/sscg/images/'+item.img+'"></img></div>';			
+				var landmark = '<div><img src="http://gestisciapp.it/sscg/images/'+item.img+'" width="100%"></img></div>';			
 				output.append(landmark);
-                qweqwe.innerHTML = qweqwe.innerHTML + landmark;
-
 			}); 
 			
 		},
 		error: function(){
 			$( "#popupDialog" ).popup( "open" );
 		   output.text('Non sei connesso ad internet! Abilita una connessione dati e riavvia l\'app!');
-		   qweqwe.innerHTML = "ciao";
 		}
 	});
     
@@ -244,11 +241,7 @@ footer {
 
           <div id="mySwipe" class="swipe">
             <div class="swipe-wrap">
-              <div><img src="images/r1.jpg" width="100%"/></div>
-              <div><img src="images/r2.jpg" width="100%"/></div>
-              <div><img src="images/r3.jpg" width="100%"/></div>
-              <div><img src="images/r4.jpg" width="100%"/></div>
-              <div><img src="images/r5.jpg" width="100%"/></div>
+
             </div>
           </div>
 
