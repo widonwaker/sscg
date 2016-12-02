@@ -4,8 +4,19 @@ $(document).ready(function(){
 		onDeviceReady();
 	});   
 
-	var output = $('.swipe-wrap');
+	var output = $('.swiper-wrapper');
 	
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+		observer: true
+    });
 
 	$.ajax({
 		url: 'http://gestisciapp.it/sscg/db_to_app_home.php',
@@ -14,7 +25,7 @@ $(document).ready(function(){
 		timeout: 5000,
 		success: function(data, status){
 			$.each(data, function(i,item){ 
-				var landmark = '<div><img src="http://gestisciapp.it/sscg/images/'+item.img+'" style="width:100%;"></img></div>';			
+				var landmark = '<div class="swiper-slide"><img src="http://gestisciapp.it/sscg/images/'+item.img+'" style="width:100%;"></img></div>';			
 				output.append(landmark);
 
 			}); 
