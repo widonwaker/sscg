@@ -1,0 +1,514 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+<meta name="viewport" content="width=device-width; inizial-scale=1.0" >
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>    
+<link href="jquery-mobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="themes/monk.css" />
+<link href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="swiper.min.css"/>
+	
+    
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/aclonica:n4:default.js" type="text/javascript"></script>
+
+<style>
+.wrap {
+    white-space: normal !important;
+}
+ </style>
+<style>
+.wrap {
+    white-space: normal !important;
+}
+ </style>
+   <style>
+	@charset "UTF-8";
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+.swipe-wrap {
+  overflow: hidden;
+  position: relative; }
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background-color: transparent; }
+article > section > * + * {
+  margin: 1.5em 0; }
+body {
+  font-family: 'Source Code Pro', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200; }
+  h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    content: '';
+    display: block;
+    width: 1.5em;
+    height: 2px;
+    margin: 0.2em 0;
+    background-color: currentColor; }
+h1 {
+  font-size: 3em; }
+h2 {
+  font-size: 2em; }
+h3 {
+  font-size: 1.4em; }
+h4 {
+  font-size: 1.15em; }
+pre code {
+  display: block;
+  padding: 1em; }
+code {
+  padding: 0.2em;
+  font-family: 'Source Code Pro', Courier, monospace;
+  border-radius: 3px; }
+.container {
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em; }
+header, footer {
+  padding: 2em; }
+.list-unstyled {
+  list-style: none outside none; }
+  .list-unstyled li {
+    display: inline; }
+  .list-unstyled li + li:before {
+    content: ' â€¢ '; }
+.demo-controls {
+  text-align: center;
+  padding: 1.5em; }
+.swipe-wrap > div {
+  margin: 0; }
+  .swipe-wrap > div b {
+    display: block;
+    margin: 0 1.5em;
+    padding: 4em 1em;
+    font-size: 2em;
+    text-align: center; }
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: inset 0 -0.1em 0 0 rgba(0, 0, 0, 0.2), inset 0 1.15em 0 0 rgba(255, 255, 255, 0.1); }
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.2); }
+::selection {
+  background-color: #27AAE1;
+  color: #eee; }
+::-moz-selection {
+  background-color: #27AAE1;
+  color: #eee; }
+body {
+  background-color: #ffffff;
+  color: #111; }
+a {
+  color: #EE3769; }
+  a:visited {
+    color: #5099b8; }
+.btn-primary {
+  background-color: #27AAE1;
+  color: #eee; }
+  .btn-primary:hover {
+    background-color: #34afe3; }
+  .btn-primary:active {
+    background-color: #1ea3da; }
+.btn-secondary {
+  background-color: #EE3769;
+  color: #eee; }
+  .btn-secondary:hover {
+    background-color: #ef4574; }
+  .btn-secondary:active {
+    background-color: #ed295e; }
+code {
+  background-color: #f2f2f2;
+  color: #111;
+  border: 1px solid #e6e6e6; }
+.swipe div b {
+  background-color: #EE3769;
+  color: #eee;
+  border-radius: 3px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1); }
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  background-color: #27AAE1; }
+footer {
+  border-top: 1px solid #f2f2f2; }
+      /* Swipe 2 required styles */
+      .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+        -ms-touch-action:none;
+         touch-action:none;
+      }
+      .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+      }
+      /* END required styles */
+    </style>
+
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header" id="header" data-position="fixed">
+    
+		<img src="images/app/logo.png" id="navImg"/>
+		<a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+        <div class="separatore"></div>
+	</div>
+	
+
+
+
+   
+   
+<!-- Swiper -->
+    <div id="mySwipe" class="swipe">
+            <div class="swipe-wrap">
+
+        </div>
+    </div>
+<div class="separatore"></div>
+
+   
+   
+  <div data-role="main" class="ui-content">
+    
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <a href="#conventi" class="ui-btn ui-corner-all ui-shadow" style="background-color:#9D0B15;color:#ffffff;"><img src="images/app/conventi.png"/><br>Conventi</a><br>
+      </div>
+      <div class="ui-block-b">
+        <a href="#" onClick="location.href='privata.html'" class="ui-btn ui-corner-all ui-shadow" style="background-color:#9D0B15;color:#ffffff;"><img src="images/app/lock.png"/><br>Privato</a><br>
+      </div>
+    </div>
+  </div>
+ 
+
+	<div data-role="content" id="content">	
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
+			<div data-role="header" data-theme="a" class="ui-corner-top">
+				<h1>Non sei connesso</h1>
+			</div>
+			<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+				<h3 class="ui-title">E' richiesta una connessione internet per utilizzare l'app.</h3>
+				<p>Abilita una connessione dati o wifi e riavvia l'applicazione.</p>
+				<a href="#" onClick="location.href='index.html'" data-role="button" data-inline="true" data-theme="a">Ok</a>     
+			</div>
+</div>
+ </div>    
+ 
+</div>
+
+
+
+
+<div data-role="page" id="conventi">
+	<div data-role="header" style="background-color: #FFFFFF;border:none;" data-position="fixed"><a href="#" onClick="location.href='index.html'" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Home</a>
+		<img src="images/app/logo.png" id="navImg"/>
+        <a href="#info" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-right" data-rel="dialog" data-transition="pop">Info Autore</a>
+        <div class="separatore"></div>
+	</div>
+    
+    <h1 class="hstyle">Conventi</h1>
+    
+	<div data-role="content">
+	        
+   <ul data-role="listview">
+  <li>
+    <a href="#" onClick="location.href='convento1.html'" >
+    <img src="images/app/conventi_geo.png">
+    <h2>Convento S.Francesco</h2>
+    <p class="wrap">Mondragone (CE) Piazza S. Francesco, 6</p>
+    <p class="wrap">Convento: 0823978141</p>
+    <p class="wrap">Parrocchia: 0823979159</p>
+    </a>
+  </li>
+  <li>
+    <a href="#" onClick="location.href='convento2.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2>Convento S.Maria del Pozzo</h2>
+    <p class="wrap">Somma Vesuviana (NA)  Via S.Maria del Pozzo</p>
+    <p class="wrap">Convento: 0815317012</p>
+    <p class="wrap">Parrocchia: 0815318961</p>
+    </a>
+  </li>
+  <li>
+    <a href="#" onClick="location.href='convento3.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Napoli - Miano</h2>
+    <p class="wrap">Miano (NA) - Piazza Madonna dell’Arco 3</p>
+    <p>Tel / Fax: 0817540293</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento4.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2>Convento San Pasquale a Chiaia</h2>
+    <p class="wrap">Chiaia (NA) - Piazza San Pasquale 3</p>
+    <p class="wrap">Tel: 0817642268</p>
+    <p class="wrap">Fax: 0817643195</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento5.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2>Convento S. Antonio</h2>
+    <p class="wrap">Torre del Greco (NA) - Via Nazionale, 98</p>
+    <p class="wrap">Convento: 0818811670</p>
+    <p class="wrap">Parrocchia / fax: 0818813879</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento6.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2>Convenot S. Maria dei Lattani</h2>
+    <p class="wrap">Roccamonfina (CE) - Strada Comunale dei Lattani 1</p>
+    <p class="wrap">Tel / fax: 0823921037</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento7.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2>Convento-Basilica San Pietro ad Aram</h2>
+    <p class="wrap">San Pietro ad Aram (NA) - Via Santa Candida 4 </p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento8.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Real Monastero S. Chiara</h2>
+    <p class="wrap">Napoli - Via S. Chiara 49/C</p>
+    <p class="wrap">Tel: 0815526277</p>
+    <p class="wrap">Fax: 0815526270</p>
+    <p class="wrap">Convento: 0815526280</p>
+    <p class="wrap">Parrocchia: 0815526371</p>
+    <p class="wrap">Email: segreteriaprov@ofmna.org</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento9.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento-Basilica Sant’Antonio</h2>
+    <p class="wrap">Afragola - Viale Sant’Antonio 50</p>
+    <p class="wrap">Convento: 0818691542</p>
+    <p class="wrap">Fax: 0818691014</p>
+    <p class="wrap">Parrocchia: 0818695186</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento10.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento San Francesco</h2>
+    <p class="wrap">Fondi (LT) - Via Gramsci 2</p>
+    <p class="wrap">Convento: 0771523025</p>
+    <p class="wrap">Parrocchia: 0771503607</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento11.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Santa Maria delle Grazie</h2>
+    <p class="wrap">Giugliano in Campania (NA) - Viale San Francesco 45</p>
+    <p class="wrap">Tel / fax: 0815068630</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento12.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Santa Caterina</h2>
+    <p class="wrap">Grumo Nevano (NA) - Piazza San Pasquale 5</p>
+    <p class="wrap">Convento: 0818801294</p>
+    <p class="wrap">Parrocchia / fax: 0818801131</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento13.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Sant’Antonio</h2>
+    <p class="wrap">Ischia (NA) - Via Mirabella 1</p>
+    <p class="wrap">Tel: 081991170</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento14.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Basilica Santa Maria a Parete</h2>
+    <p class="wrap">Liveri (NA) - Viale Santa Maria a Parete</p>
+    <p class="wrap">Tel: 0818255225</p>
+    <p class="wrap">Fax: 0818256261</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento15.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento Santa Maria degli Angeli</h2>
+    <p class="wrap">Marano (NA) - Via Casalina 9</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento16.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento San Francesco</h2>
+    <p class="wrap">Marcianise (CE) - Piazza O. Buccini 13</p>
+    <p class="wrap">Tel: 0823831154</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento17.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento San Vito</h2>
+    <p class="wrap">Marigliano (NA) - Corso Vittorio Emanuele 236</p>
+    <p class="wrap">Tel / fax: 0818851957</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento18.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento S. Maria Immacolata “La Palma”</h2>
+    <p class="wrap">La Palma (NA) - Salita Mauro 14</p>
+    <p class="wrap">Istituto: 0817430428</p>
+    <p class="wrap">Fax: 0815921115</p>
+    <p class="wrap">Infermeria: 0817435961</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento19.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento San Donato-Santuario San Salvatore</h2>
+    <p class="wrap">Orta di Atella (CE) - Piazza San Salvatore </p>
+    <p class="wrap">Convento: 0818917157</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento20.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Sede del Noviziato Interprovinciale e Convento-Santuario Santa Maria Occorrevole</h2>
+    <p class="wrap">Piedimonte Matese (CE) - Via Nuova Monte Muto 2</p>
+    <p class="wrap">Tel / Fax: 0823911898</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento21.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento San Pietro D’Alcantara</h2>
+    <p class="wrap">Portici (NA) - Piazza Granatello 12</p>
+    <p class="wrap">Tel: 0817768380</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento22.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento di Santa Maria delle Grazie</h2>
+    <p class="wrap">Santa Maria Capua Vetere (CE) - Via Convento Madonna delle Grazie</p>
+    <p class="wrap">Tel / Fax: 0823794583</p>
+    </a>
+  </li>
+  <li>
+     <a href="#" onClick="location.href='convento23.html'">
+    <img src="images/app/conventi_geo.png">
+    <h2 class="wrap">Convento-Santuario Sant’Antonio</h2>
+    <p class="wrap">Teano (CE) - Via Casi</p>
+    <p class="wrap">Tel / Fax: 0823875130</p>
+    </a>
+  </li>
+  
+</ul> 
+   </div>
+
+</div>
+
+
+<div data-role="page" id="info">
+  <div data-role="header" data-position="fixed">
+    <h1>Crediti</h1>
+  </div>
+  <div data-role="content"><center>Distributore: InformaticaTeam<br>Sviluppatore: Stefano Iodice</center></div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$(document).bind('deviceready', function(){
+		//Phonegap ready
+		onDeviceReady();
+	});   
+
+	var output = $('.swipe-wrap');
+	
+ 
+
+	$.ajax({
+		url: 'http://gestisciapp.it/sscg/db_to_app_home.php',
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback',
+		timeout: 2000,
+		success: function(data, status){
+			$.each(data, function(i,item){ 
+				var landmark = '<div><img src="http://gestisciapp.it/sscg/images/'+item.img+'" width="100%"></img></div>';			
+				output.append(landmark);
+
+			}); 
+			
+		},
+		error: function(){
+			$( "#popupDialog" ).popup( "open" )
+		   //output.text('Non sei connesso ad internet! Abilita una connessione dati e riavvia l\'app!');
+		}
+	});
+	
+});</script>
+<script src="swipe.js"></script>
+<script>
+   var element = document.getElementById('mySwipe'),
+    prevBtn = document.getElementById('prev'),
+    nextBtn = document.getElementById('next');
+
+window.mySwipe = new Swipe(element, {
+  startSlide: 0,
+  auto: 3000,
+  draggable: true,
+  autoRestart: true,
+  continuous: true,
+  disableScroll: true,
+  stopPropagation: true,
+  callback: function(index, element) {},
+  transitionEnd: function(index, element) {}
+});
+
+// using jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+prevBtn.onclick = mySwipe.prev;
+nextBtn.onclick = mySwipe.next;
+</script>
+
+</body>
+</html>
