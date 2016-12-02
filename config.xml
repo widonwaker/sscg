@@ -17,12 +17,6 @@
     <author href="http://www.informaticateam.net/" email="info@informaticateam.net">
         Informatica Team
     </author>
-	<preference name="phonegap-version" value="cli-6.0.0" />
-	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
-        <!--<preference name="windows-phone-target-version" value="8.1" />
-	<preference name="windows-target-version" value="8.1" />  -->
-        <preference name="WindowsToastCapable" value="true" />
-	<preference name="windows-appx-target" value="uap" />
 	
 
     <!--
@@ -207,6 +201,12 @@
         </gap:config-file>
     </platform>
     <platform name="winphone">
+	<preference name="phonegap-version" value="cli-5.4.1" />
+	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" /> 
+        <!--<preference name="windows-phone-target-version" value="8.1" />
+	<preference name="windows-target-version" value="8.1" />  -->
+        <preference name="WindowsToastCapable" value="true" />
+	<preference name="windows-appx-target" value="uap" />    
 	<allow-navigation href="http://*/*" />
         <gap:config-file platform="ios" parent="EnableDotNetNativeCompatibleProfile" overwrite="true">
         <false/>
