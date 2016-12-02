@@ -1,8 +1,8 @@
+
 <!DOCTYPE HTML>
 <html>
   <head>
     <title>Swipe 2</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <link href="dist/style.css" rel="stylesheet"/>
 
@@ -10,8 +10,195 @@
 
     <link rel="stylesheet" href="vendor/highlightjs/github-gist.css">
     <script src="vendor/highlightjs/highlight.pack.js"></script>
+    <script src="jquery-mobile/jquery-1.8.3.min.js"></script>
+    <script>
+$(document).ready(function(){
+	$(document).bind('deviceready', function(){
+		//Phonegap ready
+		onDeviceReady();
+	});   
+	
+	var output = $('.swipe-wrap');
+	var qweqwe = $('#qweqwe');
+	
+
+	$.ajax({
+		url: 'http://gestisciapp.it/sscg/db_to_app_home.php',
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback',
+		timeout: 2000,
+		success: function(data, status){
+			$.each(data, function(i,item){ 
+				var landmark = '<div><img src="http://gestisciapp.it/sscg/images/'+item.img+'"></img></div>';			
+				output.append(landmark);
+                qweqwe.innerHTML = qweqwe.innerHTML + landmark;
+
+			}); 
+			
+		},
+		error: function(){
+			$( "#popupDialog" ).popup( "open" );
+		   output.text('Non sei connesso ad internet! Abilita una connessione dati e riavvia l\'app!');
+		   qweqwe.innerHTML = "ciao";
+		}
+	});
+    
+    });</script>
 
     <style>
+	@charset "UTF-8";
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative; }
+
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background-color: transparent; }
+
+article > section > * + * {
+  margin: 1.5em 0; }
+
+body {
+  font-family: 'Source Code Pro', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200; }
+  h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    content: '';
+    display: block;
+    width: 1.5em;
+    height: 2px;
+    margin: 0.2em 0;
+    background-color: currentColor; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.15em; }
+
+pre code {
+  display: block;
+  padding: 1em; }
+
+code {
+  padding: 0.2em;
+  font-family: 'Source Code Pro', Courier, monospace;
+  border-radius: 3px; }
+
+.container {
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em; }
+
+header, footer {
+  padding: 2em; }
+
+.list-unstyled {
+  list-style: none outside none; }
+  .list-unstyled li {
+    display: inline; }
+  .list-unstyled li + li:before {
+    content: ' â€¢ '; }
+
+.demo-controls {
+  text-align: center;
+  padding: 1.5em; }
+
+.swipe-wrap > div {
+  margin: 0; }
+  .swipe-wrap > div b {
+    display: block;
+    margin: 0 1.5em;
+    padding: 4em 1em;
+    font-size: 2em;
+    text-align: center; }
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: inset 0 -0.1em 0 0 rgba(0, 0, 0, 0.2), inset 0 1.15em 0 0 rgba(255, 255, 255, 0.1); }
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.2); }
+
+::selection {
+  background-color: #27AAE1;
+  color: #eee; }
+
+::-moz-selection {
+  background-color: #27AAE1;
+  color: #eee; }
+
+body {
+  background-color: #ffffff;
+  color: #111; }
+
+a {
+  color: #EE3769; }
+  a:visited {
+    color: #5099b8; }
+
+.btn-primary {
+  background-color: #27AAE1;
+  color: #eee; }
+  .btn-primary:hover {
+    background-color: #34afe3; }
+  .btn-primary:active {
+    background-color: #1ea3da; }
+
+.btn-secondary {
+  background-color: #EE3769;
+  color: #eee; }
+  .btn-secondary:hover {
+    background-color: #ef4574; }
+  .btn-secondary:active {
+    background-color: #ed295e; }
+
+code {
+  background-color: #f2f2f2;
+  color: #111;
+  border: 1px solid #e6e6e6; }
+
+.swipe div b {
+  background-color: #EE3769;
+  color: #eee;
+  border-radius: 3px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1); }
+
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  background-color: #27AAE1; }
+
+footer {
+  border-top: 1px solid #f2f2f2; }
+
 
       /* Swipe 2 required styles */
 
@@ -19,8 +206,7 @@
         overflow: hidden;
         visibility: hidden;
         position: relative;
-        -ms-touch-action:none;
-         touch-action:none;
+
       }
       .swipe-wrap {
         overflow: hidden;
@@ -58,116 +244,30 @@
 
           <div id="mySwipe" class="swipe">
             <div class="swipe-wrap">
-              <div><b>0</b></div>
-              <div><img src="images/app/conventi_geo.png" /></div>
-              <div><b>2</b></div>
-              <div><b>3</b></div>
-              <div><b>4</b></div>
-              <div><b>5</b></div>
-              <div><b>6</b></div>
-              <div><b>7</b></div>
-              <div><b>8</b></div>
-              <div><b>9</b></div>
-              <div><b>10</b></div>
-              <div><b>11</b></div>
-              <div><b>12</b></div>
-              <div><b>13</b></div>
-              <div><b>14</b></div>
-              <div><b>15</b></div>
-              <div><b>16</b></div>
-              <div><b>17</b></div>
-              <div><b>18</b></div>
-              <div><b>19</b></div>
-              <div><b>20</b></div>
+              <div><img src="images/r1.jpg" width="100%"/></div>
+              <div><img src="images/r2.jpg" width="100%"/></div>
+              <div><img src="images/r3.jpg" width="100%"/></div>
+              <div><img src="images/r4.jpg" width="100%"/></div>
+              <div><img src="images/r5.jpg" width="100%"/></div>
             </div>
           </div>
 
-          <div class="demo-controls">
-            <a class="btn btn-primary" id="prev">Prev</a>
-            <a class="btn btn-primary" id="next">Next</a>
-          </div>
+
         </section>
 
         <section id="usage">
 
           <h2>Usage</h2>
+          
+          <div id="qweqwe"></div>
 
-          <p>Swipe is written in vanilla javascript. You may either create a new instance of Swipe using plain javascript or initialize it via the provided jQuery/Zepto method (assuming the library is already loaded on the page).</p>
+         </section>
+         </article></main>
 
-          <h3>Markup</h3>
+    
 
-          <pre><code class="html">&lt;div id="slider" class="swipe"&gt;
-  &lt;div class="swipe-wrap"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-          <h3>Style</h3>
-
-          <pre><code class="css">.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap &gt; div {
-  float: left;
-  width: 100%;
-  position: relative;
-}</code></pre>
-
-          <h3>Javascript</h3>
-
-          <h4>Vanilla Javascript</h4>
-
-          <pre><code class="javascript">var element = document.getElementById('mySwipe');
-window.mySwipe = new Swipe(element, {
-  startSlide: 0,
-  auto: 3000,
-  draggable: false,
-  autoRestart: false,
-  continuous: true,
-  disableScroll: true,
-  stopPropagation: true,
-  callback: function(index, element) {},
-  transitionEnd: function(index, element) {}
-});</code></pre>
-
-          <h4>Using jQuery or Zepto</h4>
-
-          <pre><code class="javascript">window.mySwipe = $('#mySwipe').Swipe().data('Swipe');</code></pre>
-
-        </section>
-
-        <section id="license">
-          <h2>License</h2>
-
-          <p>This software is &copy;2015 Brad Birdsall and Felix Liu, released under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
-
-        </section>
-      </article>
-    </main>
-
-    <footer>
-      <div class="container">
-
-        <ul class="list-unstyled">
-          <li><a href="https://github.com/lyfeyaj/swipe">Github</a></li>
-          <li><a href="https://github.com/lyfeyaj/swipe/issues">Issues</a></li>
-        </ul>
-
-      </div>
-    </footer>
-
-    <script src="jquery-mobile/jquery-1.8.3.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/load-json.js"></script>
-    <script>
+    <script src="swipe.js"></script>
+        <script>
 
 // pure JS
 var element = document.getElementById('mySwipe'),
@@ -191,8 +291,13 @@ window.mySwipe = new Swipe(element, {
 
 prevBtn.onclick = mySwipe.prev;
 nextBtn.onclick = mySwipe.next;
-    </script>
+
+	
+
+</script>
+
     <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-  </body>
+
+</body>
 </html>
