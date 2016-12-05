@@ -5,6 +5,7 @@ $(document).ready(function(){
 	});   
 
 	var output = $('.swiper-wrapper');
+	var winoutput = $('.swipe-wrap');
 	
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -27,7 +28,7 @@ $(document).ready(function(){
 			$.each(data, function(i,item){ 
 				var landmark = '<div class="swiper-slide"><img src="http://gestisciapp.it/sscg/images/'+item.img+'" style="width:100%;"></img></div>';			
 				output.append(landmark);
-
+                                winoutput.append(landmark);
 			}); 
 			
     var element = document.getElementById('mySwipe'),
