@@ -6,7 +6,7 @@
         id        = "it.gestisciapp.sscg"
         version   = "1.2.3"
 	ios-CFBundleVersion = "123"
-	windows-packageVersion = "1.2.5">
+	windows-packageVersion = "1.2.6">
 
     <name>OFMNA</name>
 
