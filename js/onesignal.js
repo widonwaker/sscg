@@ -7,15 +7,12 @@ document.addEventListener('deviceready', function () {
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
   
   var notificationOpenedCallback = function(jsonData) {
-    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
   };
 
-  window.plugins.OneSignal
-    .startInit("8dcd7084-39b6-4e2c-af5a-58caf7d76d43", "790260643795")
-    .handleNotificationOpened(notificationOpenedCallback)
-    .endInit();
-  
-  // Sync hashed email if you have a login system or collect it.
-  //   Will be used to reach the user at the most optimal time of day.
-  // window.plugins.OneSignal.syncHashedEmail(userEmail);
-}, false);
+window.plugins.OneSignal.init("8dcd7084-39b6-4e2c-af5a-58caf7d76d43",
+                                 {googleProjectNumber: "790260643795"},
+                                 notificationOpenedCallback);
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false); 
