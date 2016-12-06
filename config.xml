@@ -215,9 +215,6 @@
         <config-file target="config.xml" parent="/*" >
             <preference name="WindowsToastCapable" value="true" />
         </config-file>
-	  <vs:features>
-             <vs:feature>onesignal-cordova-plugin</vs:feature>
-          </vs:features>
     </platform>
 
 </widget>
