@@ -212,9 +212,6 @@
         <gap:config-file platform="ios" parent="EnableDotNetNativeCompatibleProfile" overwrite="true">
         <false/>
         </gap:config-file>
-        <config-file target="config.xml" parent="/*" >
-            <preference name="WindowsToastCapable" value="true" />
-        </config-file>
     </platform>
 
 </widget>
