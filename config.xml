@@ -18,6 +18,8 @@
         Informatica Team
     </author>
 	
+    	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" />    
+	<preference name="WindowsStoreIdentityName" value="36144InformaticaTeam.ofmna"/>  	
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -203,11 +205,9 @@
     </platform>
     <platform name="winphone">
 	<preference name="phonegap-version" value="cli-6.1.0" />
-<!-- Window Phone 8.1 builds must use cli-6.1.0+ above -->
-<preference name="windows-appx-target" value="8.1-phone" />
-<preference name="WindowsToastCapable" value="true" />
-	<preference name="windows-identity-name" value="36144InformaticaTeam.ofmna" />    
-	<preference name="WindowsStoreIdentityName" value="DeveloperHut.UWPTest"/>    
+        <!-- Window Phone 8.1 builds must use cli-6.1.0+ above -->
+        <preference name="windows-appx-target" value="8.1-phone" />
+        <preference name="WindowsToastCapable" value="true" />  
 	<allow-navigation href="http://*/*" />
         <gap:config-file platform="ios" parent="EnableDotNetNativeCompatibleProfile" overwrite="true">
         <false/>
