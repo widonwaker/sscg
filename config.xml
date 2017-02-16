@@ -211,7 +211,7 @@
         </gap:config-file>
     </platform>
     <platform name="winphone">
-	<preference name="phonegap-version" value="cli-6.1.1" />
+	<preference name="phonegap-version" value="cli-6.1.0" />
 	<preference name="windows-appx-target" value="8.1-phone" />    
 	<preference name="windows-arch" value="x86" />     
         <!-- Window Phone 8.1 builds must use cli-6.1.0+ above -->
